@@ -1,0 +1,183 @@
+@import
+url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+/* colors and images */
+:root {
+    --nav-links-color: #fff;
+    --button-hover-color: #878584;
+    --backoffice-menu-bg: #343a40;
+    --table-head-bg: #e9ecef;
+    --nav-link-hover-color: #f79800;
+    --footer-color: #e3e3e3;
+    --dark-layer: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6));
+    --edit-button-color: #ffa207;
+    --delete-button-color: #dc3545;
+    --pagination-active-bg: #007bff;
+    --header-bg-image: url(img_bg_backoffice_usuario.jpg)
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    min-width: 590px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* header styles */
+header {
+    background-image: var(--dark-layer), var(--header-bg-image);
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    color: var(--nav-links-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 2% 5%;
+}
+header a:hover {
+    color: var(--nav-link-hover-color);
+}
+
+.site_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.site_menu > .header_links {
+    display: flex;
+    column-gap: 2rem;
+}
+
+.backoffice_menu {
+    display: flex;
+    column-gap: 2rem;
+    background-color: var(--backoffice-menu-bg);
+    color: var(--nav-links-color);
+    font-size: 0.7rem;
+    padding: 1rem 5%;
+}
+
+/* main styles */
+main {
+    min-height: 40vh;
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-spacing: 0;
+}
+
+thead {
+    background-color: var(--table-head-bg);
+}
+
+tbody {
+    vertical-align: top;
+}
+
+td, th {
+    text-align: left;
+    width: 20rem;
+}
+
+td {
+    padding: 0.6rem 1rem;
+}
+
+th {
+    padding: 1rem;
+}
+
+.action_buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    column-gap: 1rem;
+    padding: 0.6rem 0;
+    width: 100%;
+}
+
+.text_button {
+    font-weight: bold;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.edit_button {
+    color: var(--edit-button-color)
+}
+
+.delete_button {
+    color: var(--delete-button-color);
+}
+
+.edit_button:hover, .delete_button:hover {
+    color: var(--button-hover-color);
+}
+
+/* pagination */
+.pagination {
+    display: flex;
+    margin: 1rem auto;
+}
+
+.pagination button {
+    color: black;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border: 1px solid #ddd;
+}
+
+.pagination button:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.pagination button:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.pagination button.active {
+    background-color: var(--pagination-active-bg);
+    border-color: var(--pagination-active-bg);
+    color: white;
+}
+
+.pagination button:hover:not(.active) {
+    background-color: #ddd;
+}
+
+/* footer styles */
+footer {
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    left: 0%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    background-color: var(--footer-color);
+    min-height: 2rem;
+}
